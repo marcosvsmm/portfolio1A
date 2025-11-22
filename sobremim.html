@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOBRE MIM</title>
+            <link rel="icon" href="fotos/MANOPLAAAAAAAAAAAA_desenhodejoaolucas-removebg-preview.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/avengero" rel="stylesheet">
+    </head>
+
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            overflow-y: hidden;
+        }
+
+        html{
+  scroll-behavior: smooth
+}
+        h1{
+            position: fixed;
+            top: 5px; left: 40%; z-index: 10000;
+                        color: white;
+
+
+                          font-family: 'Avengero', sans-serif;
+        }
+
+
+
+.menu-container {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 100vh;
+  width: 20px; /* apenas a "alça" visível */
+  z-index: 1000;
+}
+.verticalmenu {
+  position: absolute;
+  top: 20px;
+  left: -373px; /* escondido, exceto a alça */
+  width: 380px;
+  height: 84.5%;
+  list-style-type: none;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  padding-top: 15px;
+  background-color: rgb(43, 43, 43);
+  border-radius: 0 1000px 1000px 0;
+  transition: left 0.5s ease;
+}
+.menu-container:hover .verticalmenu {
+  left: 0;
+}
+.simbolo {
+  position: absolute;
+  top: 84%;
+  left: 100%;
+  transform: translateY(-450%);
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  z-index: 1001;
+}
+
+.iconesimbolo{
+  
+  width: 70px;
+  opacity: 1;
+  visibility: visible;
+    transition: opacity 1s ease, visibility 3s ease, transform 0.5s ease
+}
+
+.menu-container:hover .iconesimbolo {
+transform: translate(-5px, -280px) rotate(360deg);
+  
+}
+.simboloving:hover{
+      all: unset;
+
+}
+
+@keyframes brilho1 {
+  0% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px yellow);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+}
+
+img.manoplabrilhante {
+  animation: brilho1 1.5s infinite;
+}
+
+@keyframes brilho2 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(163, 163, 13));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(163, 163, 13));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(163, 163, 13));
+  }
+}
+
+img.joia1brilhante {
+  animation: brilho2 1.5s infinite;
+}
+
+@keyframes brilho3 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(162, 5, 5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(213, 52, 52));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(162, 5, 5));
+  }
+}
+
+img.joia2brilhante {
+  animation: brilho3 2.3s infinite;
+}
+
+@keyframes brilho4 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(5, 122, 1));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(50, 255, 43));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(5, 122, 1));
+  }
+}
+
+img.joia3brilhante {
+  animation: brilho4 5s infinite;
+}
+
+@keyframes brilho5 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(21, 51, 173));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(93, 86, 244));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(21, 51, 173));
+  }
+}
+
+img.joia4brilhante {
+  animation: brilho5 4.5s infinite;
+}
+
+@keyframes brilho6 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(183, 43, 8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(230, 73, 33));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(183, 43, 8));
+  }
+}
+
+img.joia5brilhante {
+  animation: brilho6 3s infinite;
+}
+
+@keyframes brilho7 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(65, 0, 216));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(57, 0, 191));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(8, 1, 144));
+  }
+}
+
+img.joia6brilhante {
+  animation: brilho7 2s infinite;
+}
+
+    a{
+      color: white;
+      text-decoration: none;
+    }
+    a:hover{
+      color:azure;
+      background-color: black;
+      padding: 5px
+    }
+    li{
+      padding: 10px;
+    }
+
+
+            #particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  z-index: -1; /* fica atrás de tudo */
+}
+
+
+.poeirasc{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 600vw;
+  height: 100vh;
+  overflow: hidden;
+  background: none/* ou seu fundo animado */
+}
+
+
+.fragmento1 {
+  position: relative;
+  padding: 200px;
+  left: 21%;
+  width: 500px;
+ animation: frag1 3s ease-in-out infinite
+}
+
+.fragmento1m1 {
+  position: absolute;
+  padding: 100px;
+  left: 2%;
+  width: 600px;
+ animation: frag1 10s ease-in-out infinite
+}
+
+.fragmento1m2 {
+  position: absolute;
+  padding: 300px;
+  left: 1%;
+  width: 700px;
+ animation: frag1 8s ease-in-out infinite
+}
+
+.fragmento1m3 {
+  position: absolute;
+  padding: 410px;
+  left: 8%;
+  width: 300px;
+ animation: frag1 5s ease-in-out infinite
+
+}
+
+
+
+
+@keyframes frag1{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+
+}
+
+
+.fragmento2 {
+  position:absolute;
+  padding: 300px;
+  left: 25%;
+  width: 500px;
+ animation: frag2 3s ease-in-out infinite
+}
+
+.fragmento2m1 {
+  position: relative;
+  padding: 200px;
+  left: 30%;
+  width: 600px;
+ animation: frag2 10s ease-in-out infinite
+}
+
+.fragmento2m2 {
+  position: absolute;
+  padding: 100px;
+  left: 30%;
+  width: 600px;
+ animation: frag2 8s ease-in-out infinite
+}
+
+.fragmento2m3 {
+  position: absolute;
+  padding: 430px;
+  left: 34%;
+  width: 900px;
+ animation: frag2 5s ease-in-out infinite
+
+}
+
+.fragmento2m4 {
+  position: absolute;
+  padding: 400px;
+  left: 29%;
+  width: 900px;
+ animation: frag2 7s ease-in-out infinite
+
+}
+
+@keyframes frag2{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+
+}
+
+.poeira2{
+  position: relative;
+  right: 55%;
+}
+
+@keyframes frag2{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+
+}
+
+
+.foto{
+  position: absolute;
+  top: 25%;
+  left: 5.7%;
+  width: 400px;
+  height: 500px;
+  z-index: 100;
+}
+.imagem1{
+  position: relative;
+  height: 100%;
+  top: 5px;
+  width: 100%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.601)
+}
+.info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 19, 39, 0.7);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+  box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.601);
+}
+.foto:hover .imagem1{
+  transform: translateX(-170px) scale(1.1);
+}
+.foto:hover .info{
+    opacity: 1;
+  transform: translateX(250px);
+}
+
+.foto2{
+  position: absolute;
+  top: 25%;
+  right: 50.5%;
+  width: 400px;
+  height: 500px;
+}
+.imagem2{
+  position: relative;
+  box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.601);
+  height: 100%;
+  width: 100%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+}
+.info2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 19, 39, 0.7);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+  box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.601)
+}
+.foto2:hover .imagem2{
+  transform: translateX(-190px) scale(1.2);
+}
+.foto2:hover .info2{
+    opacity: 1;
+  transform: translateX(250px);
+}
+
+
+
+.foto3{
+  position: absolute;
+  top: 25%;
+  right: 50%;
+  width: 400px;
+  height: 500px;
+}
+.imagem3{
+  position: relative;
+  top:5px;
+  height: 100%;
+  width: 100%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.601)
+}
+.info3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 100%;
+  background-color: rgb(22, 19, 39, 0.7);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+  box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.601)
+}
+.foto3:hover .imagem3{
+  transform: translateX(-170px) scale(1.1);
+}
+.foto3:hover .info3{
+    opacity: 1;
+  transform: translateX(250px);
+}
+
+    </style>
+    <body>
+    
+    <div id="particles-js"></div>
+    <h1>SOBRE MIM</h1>
+
+
+      <div class="menu-container">
+                <div class="simbolo">
+          <a href="portfóliosemintro.html" class="simboloving"><img src="fotos/simbolovingadores.png" alt="Símbolo" class="iconesimbolo"></a>
+        </div>
+      <ul class="verticalmenu" id="menuvert">
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="sobremim.html" style="position: relative; top:17px">SOBRE MIM<img src="fotos/MANOPLAAAAAAAAAAAA_desenhodejoaolucas-removebg-preview.png" class="manoplabrilhante" style="width: 80px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_mat.html" style="position: relative; top: 17px;">MATEMÁTICA <img src="fotos/joia_amarela_Damente.png" class="joia1brilhante" style="width: 50px; position: relative; top:19px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_port.html" style="position: relative; top: 17px;">LINGUAGENS<img src="fotos/joia_vermelho_darealidade.png" class="joia2brilhante" style="width: 50px; position: relative; top:19px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_ch.html" style="position: relative; top:17px;">CIÊNCIAS HUMANAS<img src="fotos/joia_verde_dotempo.png" class="joia3brilhante" style="width: 50px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_cn.html" style="position: relative; top:17px;">CIÊNCIAS DA NATUREZA<img src="fotos/joia_azul_doespaço.png" class="joia4brilhante" style="width: 50px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_pj.html" style="position: relative; top:17px;">PROJETO DE VIDA <img src="fotos/joia_laranja_damente.png" class="joia5brilhante" style="width: 50px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_senai.html" style="position: relative; top: 17px;">SENAI <img src="fotos/joia_roxa_daforça.png" class="joia6brilhante"style="width: 50px; position: relative; top:20px;"></a></li>
+          </ul>
+        </div>
+
+
+      <div class="poeirasc">
+        <section id="secao1">
+
+          <div class="poeira1">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento1">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento1m1">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento1m2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento1m3">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento1m4">
+
+          </div>
+
+          <div class="foto">
+          <img src="fotos/Imagem do WhatsApp de 2025-06-07 à(s) 23.04.41_ea61ae73.jpg" class="imagem1">
+          
+              <div class="info">
+
+                <nav>
+                <a href="#secao2" style="position: absolute; top: 1%; left: 77%;z-index: 100; color: white; background-color: rgb(30, 32, 73); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 1px 1px 3px 0 rgb(255, 255, 255);">Avançar</a>
+                </nav>
+
+                <h2 style="padding: 10px; color:white; font-family: 'Orbitron', sans-serif">QUEM EU SOU?</h2>
+                <p style="padding: 10px; color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 10px; text-align: justify;">Me chamo Marcos, tenho 15 anos e sou apaixonado por música, esportes e filmes de ficção científica e de mistério. Minhas músicas favoritas são de maioria católica e de MPB, e costumo, nas minhas horas vagas, aproveitar o dia e me divertir com amigos e família.</p>
+              </div>
+          </div>
+        </section>
+
+        
+        <section id="secao2" style="position: relative; left: 30% ;">
+
+          <div class="poeira2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m1">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m3">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m4">
+
+          </div>
+          <div class="foto2">
+            <img src="fotos/Imagem do WhatsApp de 2025-10-31 à(s) 16.49.20_65532b45.jpg" class="imagem2">
+          
+              <div class="info2">
+
+                <nav>
+                <a href="#secao3" style="position: absolute; top: 1%; left: 77%;z-index: 100; color: white; background-color: rgb(30, 32, 73); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 1px 1px 3px 0 rgb(255, 255, 255);">Avançar</a>
+                </nav>
+
+                <h2 style="padding: 10px; color:white; font-family: 'Orbitron', sans-serif">QUALIDADES - </h2>
+                <p style="color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;"> .Empático;</p>
+                <p style=" color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Companheiro;</p>
+                <p style=" color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Comunicativo;</p>
+                <p style=" color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Respeitoso;</p>
+                <p style=" color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Esperto;</p>
+                <p style=" color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Altruísta;</p>
+              </div>
+          </div>
+        </section>
+
+          <section id="secao3" style="position: relative; left: 60.7% ;">
+
+          <div class="poeira2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m1">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m2">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m3">
+          <img src="fotos/poeirasobremim.webp" alt="Poeira Cósmica" class="fragmento2m4">
+
+          </div>
+          <div class="foto3">
+            <img src="fotos/Imagem do WhatsApp de 2025-06-07 à(s) 22.18.01_69e76c7f.jpg" class="imagem3">
+          
+              <div class="info3">
+
+                <nav>
+                <a href="#secao1" style="position: absolute; top: 1%; left: 84.5%;z-index: 100; color: white; background-color: rgb(30, 32, 73); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 1px 1px 3px 0 rgb(255, 255, 255);">Retornar</a>
+                </nav>
+
+                <h2 style="padding: 10px; color:white; font-family: 'Orbitron', sans-serif">OBJETIVOS - </h2>
+                <p style="position:relative;bottom: 20px;color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Me manter fiel à palavra de Deus;</p>
+                <p style=" position:relative;bottom: 20px;color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Aprender um segundo idioma;</p>
+                <p style="position:relative;bottom: 20px; color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Bons resultados no SSA;</p>
+                <p style="position:relative;bottom: 20px; color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Passar em concursos públicos</p>
+                <h2 style="position:relative;bottom: 25px;padding: 10px; color:white; font-family: 'Orbitron', sans-serif">CONQUISTAS - </h2>
+                <p style="position:relative;bottom: 30px; color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Passar da primeira fase da OBB;</p>
+                <p style="position:relative;bottom: 30px; color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Aprender a programar;</p>
+                <p style=" position:relative;bottom: 30px;color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large; text-indent: 25px; text-align: justify;">.Ingressar no SESI; <p style="position: relative; bottom: 38%;left: 64%;color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large;">.Aprovação no ETE;</p> </p>
+                <p style="position: relative; bottom: 38%;left: 52.5%;color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large;">.Participar de uma banda;</p>
+                <p style="position: relative; bottom: 38%;left: 38%;color:white; font-family: 'Rajdhani', sans-serif; font-size: x-large;">.Aprender a montar o cubo mágico;</p>
+              </div>
+          </div>
+        </section>
+
+      </div>
+
+
+         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 250 },
+    "size": { "value": 1 },
+    "move": { "speed": 0.4 },
+    "line_linked": { "enable": false },
+    "opacity": { "value": 0.8, "random": true }
+  }
+});
+</script>
+
+
+    </body>
+</html>

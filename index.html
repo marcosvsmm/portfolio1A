@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio AVENGERS</title>
+        <link rel="icon" href="fotos/logofavicontelainicial.png" type="image/png">
+        <link href="https://fonts.cdnfonts.com/css/avengero" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+        <style>
+                  body{
+        margin:0;
+        height: 100vh;
+        background:black;
+                    overflow-y: hidden;
+
+            }
+                    html{
+            scroll-behavior: smooth
+            }
+            a{
+              text-decoration: none;
+            }
+
+
+                #particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  z-index: -1; /* fica atrás de tudo */
+}
+
+.container1{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: 400px;
+    height: 500px;
+    animation: info1 4s infinite ease, brilho1 3s infinite
+}
+
+@keyframes info1 {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes brilho1 {
+  0% {
+    filter: drop-shadow(0 0 40px rgb(196, 196, 196));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgb(146, 146, 146));
+  }
+  100% {
+    filter: drop-shadow(0 0 40px rgb(128, 128, 128));
+  }
+}
+.container1:hover{
+  animation-play-state: paused;
+}
+.infos1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(42, 42, 42, 0.75);
+    border-radius: 10px;
+    transition: transform 2s ease;
+
+}
+
+
+.infos1:hover{
+  transform: scale(1.2);
+}
+
+.container2{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    height: 500px;
+    animation: info2 4s infinite ease, brilho2 2s infinite;
+}
+
+@keyframes info2 {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes brilho2 {
+  0% {
+    filter: drop-shadow(0 0 40px rgb(196, 196, 196));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgb(146, 146, 146));
+  }
+  100% {
+    filter: drop-shadow(0 0 40px rgb(128, 128, 128));
+  }
+}
+
+.container2:hover{
+  animation-play-state: paused;
+}
+.infos2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(42, 42, 42, 0.75);
+    border-radius: 10px;
+    transition: transform 2s ease;
+
+}
+
+
+.infos2:hover{
+  transform: scale(1.2);
+}
+
+
+.imagemcapacete{
+  opacity: 0.7;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+
+.primeiro{
+position: relative;
+top: 10%;
+left: 10%;
+color: white;
+font-family: 'Avengero';
+transition: transform 2s ease-in-out;
+            }
+.imagemcapacete:hover{
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.infos2:hover .primeiro{
+  transform: translateY(20px);
+}
+
+
+.estalando{
+  opacity: 0.7;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.segundo{
+position: relative;
+top: 10%;
+left: 13%;
+color: white;
+font-family: 'Avengero';
+transition: transform 2s ease-in-out;}
+
+.estalando:hover{
+  opacity: 0.89;
+  transform: scale(1.15);
+}
+
+.infos1:hover .segundo{
+  transform: translateY(20px);
+}
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id="particles-js"></div>
+        
+        <div class="container1">
+          <a href="portfólio1000seDeusquiser.html">
+            <div class="infos1">
+              <img src="fotosintro/homemdeferroestalar.webp" style="position: relative; width: 360px; left: 5%; top: 10%; border-radius: 10px;" class="estalando">
+              <div class="segundo">
+                <h2>Segundo Semestre</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="container2">
+          <a href="https://sites.google.com/view/portfolio-marcosv-1a" target="_blank" id="teste-link">
+            <div class="infos2">
+              <img src="fotosintro/foohomemdeferrocapacete.jpg" style="position: relative; width: 360px; left: 5%; top: 10%; border-radius: 10px;" class="imagemcapacete">
+              <div class="primeiro">
+                <h2>Primeiro Semestre</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 200 },
+    "size": { "value": 0.8 },
+    "move": { "speed": 0.3 },
+    "line_linked": { "enable": false },
+    "opacity": { "value": 0.8, "random": true }
+  }
+});
+</script>  
+    </body>

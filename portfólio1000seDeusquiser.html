@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio AVENGERS</title>
+    <link rel="icon" href="fotos/logofavicontelainicial.png" type="image/png">
+    <link href="https://fonts.cdnfonts.com/css/avengero" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+      #intro-video{
+        position: fixed;
+        top:0; left:0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 99999999;
+        background: black
+      }
+
+      #conteudo-portfolio{
+        display: none
+      }
+
+      #playbutton{
+        position: fixed;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        z-index: 900000000000000000000000000;
+        transition: background 0.3s;
+
+      }
+
+      #playbutton:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+
+
+
+      body{
+        margin:0;
+        height: 100vh;
+        background:black;
+                    overflow-y: hidden;
+
+}
+html{
+  scroll-behavior: smooth
+}
+
+
+
+.elementos {
+position: relative;
+display: flex;
+justify-content:center;
+align-items:flex-end; 
+height: 95vh
+}
+
+
+.titulo{
+    position: fixed;
+    top: -20px; left: 350px;
+  color:white;
+  font-family: 'Avengero', sans-serif;
+  z-index: 900
+}
+.titulo2{
+    position: fixed;
+    top: 60px; left: 550px;
+  color:white;
+  font-family: 'Avengero', sans-serif;
+}
+
+
+
+
+    a{
+      color: white;
+      text-decoration: none;
+      background: transparent !important;
+    }
+    a:hover{
+      color:azure;
+      background-color: black;
+      padding: 05px
+    }
+    li{
+      padding: 10px;
+    }
+    #particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  z-index: -1; /* fica atrás de tudo */
+}
+h1{
+position: fixed;
+top: 10px; left: 470px; z-index: 10000;
+color: white;
+font-size:xxx-large
+
+}
+h2{
+  position: fixed;
+top: 70px; left: 620px; z-index: 10000;
+color: white;
+font-size:xx-large
+}
+
+
+
+.infogerais1{
+  position: absolute;
+  bottom: 350px;
+  width: 400px;
+  height: 600px;
+}
+
+.infomat{
+
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.joiamat:hover .infomat{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-35px);
+     z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+
+.infolin{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.joialin:hover .infolin{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+      z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+.infonatu{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.joiacn:hover .infonatu{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+      z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+.infohumanas{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.joiach:hover .infohumanas{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+      z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+.infopj{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.joiapj:hover .infopj{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+      z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+.infosenai{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.joiasenai:hover .infosenai{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+      z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+.infomanopla{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-100px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.manoplaedit:hover .infomanopla{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+   z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+.infoiniciais{
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.95);
+    transform: translateX(-35px);
+    border-radius: 10px;
+  transition: opacity 0.25s ease-in, visibility 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.infoinicial:hover .infoiniciais{
+  opacity: 1;
+  visibility: visible;
+   transform: translateX(-35px);
+   z-index: 999;
+    background-color: rgba(34, 34, 34);
+}
+
+
+.matematica-oloko{
+  animation: matematica 4s ease-in-out infinite, brilho1 4s infinite;
+}
+
+
+.matematica-oloko:hover{
+  animation-play-state: paused;
+}
+
+.matematica{
+  transition: transform 0.7s ease;
+}
+
+.matematica:hover {
+  transform: scale(1.4);
+  animation-play-state: paused, running;
+  z-index: 99999;
+}
+
+
+@keyframes brilho1 {
+  0% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px yellow);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+}
+
+@keyframes matematica {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+
+.linguagens-oloko{
+  animation: linguagens 3s ease-in-out infinite, brilho2 2s infinite;
+}
+
+.linguagens-oloko:hover{
+  animation-play-state: paused;
+}
+
+.linguagens{
+  transition: transform 0.7s ease;
+}
+.linguagens:hover{
+  transform: scale(1.4);
+
+}
+@keyframes brilho2 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(162, 5, 5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(213, 52, 52));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(162, 5, 5));
+  }
+}
+
+@keyframes linguagens {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+
+.natureza-oloko{
+  animation: natureza 3s ease-in-out infinite, brilho3 7s infinite;
+}
+
+.natureza-oloko:hover{
+  animation-play-state: paused;
+}
+
+.natureza{
+  transition: transform 0.7s ease;
+}
+.natureza:hover{
+  transform: scale(1.4);
+
+
+}
+@keyframes brilho3 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(21, 51, 173));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(93, 86, 244));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(21, 51, 173));
+  }
+}
+
+@keyframes natureza {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+}
+
+.humanas-oloko{
+  animation: humanas 3s ease-in-out infinite, brilho4 3s infinite;
+}
+
+.humanas-oloko:hover{
+    animation-play-state: paused;
+}
+
+.humanas{
+  transition: transform 0.7s ease;
+}
+.humanas:hover{
+  transform: scale(1.4);
+
+}
+@keyframes brilho4 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(5, 122, 1));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(50, 255, 43));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(5, 122, 1));
+  }
+}
+
+@keyframes humanas {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.pj-oloko{
+  animation: pj 4s ease-in-out infinite, brilho5 4s infinite;
+}
+.pj-oloko:hover{
+    animation-play-state: paused;
+}
+
+.pj{
+  transition: transform 0.7s ease;
+}
+
+.pj:hover{
+  transform: scale(1.4);
+}
+
+@keyframes brilho5 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(183, 43, 8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(230, 73, 33));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(183, 43, 8));
+  }
+}
+
+@keyframes pj {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.senai-oloko{
+  animation: senai 4s ease-in-out infinite, brilho6 4s infinite;
+}
+.senai-oloko:hover{
+    animation-play-state: paused;
+}
+.senai{
+  transition: transform 0.7s ease;
+}
+
+.senai:hover{
+  transform: scale(1.4);
+}
+
+@keyframes brilho6 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(65, 0, 216));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(57, 0, 191));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(8, 1, 144));
+  }
+}
+
+@keyframes senai {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.manopla-oloko{
+  animation: manopla 3s ease-in-out infinite, brilho1 3s infinite;
+}
+.manopla-oloko:hover{
+    animation-play-state: paused;
+}
+.manopla{
+  transition: transform 0.7s ease;
+}
+.manopla:hover{
+  transform: scale(1.4);
+}
+@keyframes brilho1 {
+  0% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px yellow);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+}
+
+@keyframes manopla {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.texto{
+  color: #ffffff; font-size: 20px; line-height: 0.3; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <video id="intro-video">
+      <source src="ccc5bef2e409f31c_537c57a506c1429f997eec984fa48440.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <button id="playbutton">&#9658;</button>
+
+
+<div id="conteudo-portfolio">
+      <h1 class="titulo">Vingadores Ultimato</h1>
+      <h2 style="position: fixed; top: 44px; left: 50.3%;">´</h2>
+      <h2 class="titulo2">Portfolio</h2>
+      <div id="particles-js"></div>
+
+
+
+
+    <div class="joiamat">
+      <a class="matematica-oloko" href="pag_mat.html" style="position: absolute; width: 100px; height: auto; top: 30%; left: 60%;"><img src="fotos/joia_amarela_Damente.png" alt="Matemática" style="width: 100%; height:auto" class="matematica">
+      </a>
+      
+      <div class="infogerais1">
+      <div class="infomat" style="color: aliceblue; position: absolute; top: 50%; left: 10%;"> 
+        
+        <h3 style="padding-left: 100px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Matematica </h3>
+        <p style="position: absolute; bottom: 87%; left:56%; font-size:xx-large;">´</p>
+
+
+        <h4 style="padding-left: 75px;color: #ffcc00;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #ffd700;">~ Jóia da Mente ~</h4>
+
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">Conhecida por sua capacidade de manipular a mente de qualquer ser, permitindo ao portador controlar pensamentos, emoções e até mesmo a realidade de suas vítimas</p>
+        <p class="texto">. Controle de pensamentos e emoções; </p>
+        <p class="texto">. Leitura e projeção mental; </p>
+        <p class="texto">. Expansão da consciência; </p>
+        <p class="texto">. Criação de ilusões mentais;</p>
+        <p class="texto">. Acesso à sabedoria universal; </p>
+        <p class="texto">. Amplificação da inteligência</p>
+
+      </div>
+      </div>
+    </div>
+
+    <div class="joialin">
+        <a class="linguagens-oloko"href="pag_port.html" style="position: absolute; width: 100px; height: auto; top: 20%; left: 36%;"><img src="fotos/joia_vermelho_darealidade.png" alt="Linguagens" style="width: 100%; height:auto" class="linguagens">
+      
+      </a>
+      <div class="infogerais1">
+      <div class="infolin" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+
+        <h3 style="padding-left: 100px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Linguagens</h3>
+
+        <h4 style="padding-left: 45px;color: #ac0707;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #ac0707;">~ Jóia da Realidade ~</h4>
+
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">A Joia da Realidade, também conhecida como Aether, é uma das seis Joias do Infinito e possui a capacidade de alterar e deformar o tecido da realidade.</p>
+        <p class="texto">. Alteração da realidade física e natural; </p>
+        <p class="texto">. Transformação de matéria e energia; </p>
+        <p class="texto">. Criação de ilusões físicas e visuais; </p>
+        <p class="texto">. Manipulação de leis da física e lógica;</p>
+        <p class="texto">. Reconfiguração de espaços e objetos; </p>
+        <p class="texto">. Quebra das limitações do mundo real</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="joiacn">
+        <a class="natureza-oloko" href="pag_cn.html" style="position: absolute; width: 100px; height: auto; top: 50%; left: 84%;"><img src="fotos/joia_azul_doespaço.png" alt="Ciências da Natureza" style="width: 100%; height:auto" class="natureza"></a>
+
+      <div class="infogerais1">
+      <div class="infonatu" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+
+            <h3 style="padding-left: 20px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Ciencias da Natureza</h3>
+            <p style="position: absolute; bottom: 90%; left:15.5%; font-size:x-large;">^</p>
+
+        <h4 style="padding-left: 60px;color: #0034a3;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #0034a3;">~ Jóia do Espaço ~</h4>
+
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">Artefato cósmico que concede ao usuário a habilidade de viajar instantaneamente para qualquer lugar do universo, estando presente em múltiplos locais simultaneamente (onipresença) e controlando o espaço além das leis da física convencionais.</p>
+        <p class="texto">. Amplifica o poder das outras Joias; </p>
+        <p class="texto">. Manipular e distorcer o espaço físico; </p>
+        <p class="texto">. Cria portais estáveis para passagem; </p>
+        <p class="texto">. Manipulação de leis da física e lógica;</p>
+        <p class="texto">. Permite teletransporte instantâneo; </p>
+      </div>
+      </div>
+    </div>
+
+    <div class="joiach">
+        <a class="humanas-oloko" href="pag_ch.html" style="position: absolute; width: 100px; height: auto; top: 48%; left: 40%;"><img src="fotos/joia_verde_dotempo.png" alt="Projeto de Vida" style="width: 100%; height:auto" class="humanas">
+      
+      </a>
+      <div class="infogerais1">
+      <div class="infohumanas" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+        <h3 style="padding-left: 45px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Ciencias Humanas</h3>
+        <p style="position: absolute; bottom: 90%; left:22%; font-size:x-large;">^</p>
+
+        <h4 style="padding-left: 65px;color: #01781a;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #01781a;">~ Jóia do Tempo ~</h4>
+
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">Artefato que dá total domínio sobre a dimensão temporal, possibilitando viajar para qualquer época e alterar o rumo da história ao manipular acontecimentos.</p>
+        <p class="texto">. Controle do fluxo do tempo; </p>
+        <p class="texto">. Criação de loops temporais; </p>
+        <p class="texto">. Visão do passado e do futuro; </p>
+        <p class="texto">. Restauração de eventos destruídos;</p>
+        <p class="texto">. Manipulação da idade de seres e coisas; </p>
+        <p class="texto">. Intervenção nas linhas temporais</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="joiapj">
+        <a class="pj-oloko" href="pag_pj.html" style="position: absolute; width: 100px; height: auto; top: 57%; left: 68%;"><img src="fotos/joia_laranja_damente.png" alt="Projeto de Vida" style="width: 100%; height:auto" class="pj">
+      
+      </a>
+      <div class="infogerais1">
+      <div class="infopj" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+
+            <h3 style="padding-left: 60px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Projeto de Vida</h3>
+
+        <h4 style="padding-left: 75px;color: #aa570f;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #aa570f;">~ Jóia da Alma ~</h4>
+
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">A Joia da Alma confere ao seu portador a habilidade de roubar, manipular e alterar as almas dos vivos e mortos. Ela tem a capacidade de acessar memórias, habilidades e até aprisionar almas em um limbo perpétuo.</p>
+        <p class="texto">. Manipulação de almas, vivas ou mortas; </p>
+        <p class="texto">. Concede acesso à dimensão espiritual; </p>
+        <p class="texto">. Pode extrair a alma de um corpo; </p>
+        <p class="texto">. Detecta intenções e vidas ocultas;</p>
+        <p class="texto">. A única Joia que exige um sacrifício</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="joiasenai">
+        <a class="senai-oloko" href="pag_senai.html" style="position: absolute; width: 130px; height: auto; top: 20%; left: 78%;"><img src="fotos/joia_roxa_daforça.png" alt="SENAI" style="width: 100%; height:auto" class="senai">
+      
+      </a>
+      <div class="infogerais1">
+      <div class="infosenai" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+      <h3 style="padding-left: 145px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">SENAI</h3>
+
+        <h4 style="padding-left: 75px;color: #3d00b8;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #3d00b8;">~ Jóia do Poder ~</h4>
+
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">Seu poder está ligado à energia cósmica ilimitada, permitindo que seu usuário tenha invulnerabilidade, força física aprimorada e uma fonte inesgotável de energia para diversas utilizações.</p>
+        <p class="texto">. Aumenta exponencialmente a força; </p>
+        <p class="texto">. Libera rajadas de energia devastadoras; </p>
+        <p class="texto">. Concede energia ilimitada ao usuário; </p>
+        <p class="texto">. Aumenta os poderes das outras Joias;</p>
+        <p class="texto">. Permite absorver qualquer energia</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="manoplaedit">
+        <a class="manopla-oloko" href="sobremim.html" style="position: absolute; width: 250px; height: auto; top: 60%; left: 46%;"><img src="fotos/MANOPLAAAAAAAAAAAA_desenhodejoaolucas-removebg-preview.png" alt="Manopla" style="width: 100%; height:auto" class="manopla">
+      
+      </a>
+      <div class="infogerais1">
+      <div class="infomanopla" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+
+          <h3 style="padding-left: 110px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Sobre Mim</h3>
+
+        <h4 style="padding-left: 50px;color: yellow;font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px yellow;">~ Manopla do Infinito ~</h4>
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">A Manopla do Infinito é um artefato da Marvel feito para reunir as Seis Joias do Infinito. Com todas elas, quem a usa ganha controle quase total sobre tempo, espaço, realidade, poder, mente e alma. É conhecida principalmente por ser usada por Thanos.</p>
+            <p class="texto">. Criada pelos Anciões; </p>
+        <p class="texto">. Requer força extrema; </p>
+        <p class="texto">. Controla leis cósmicas </p>
+      </div>
+      </div>
+    </div>
+
+        <div class="infoinicial">
+
+
+      <div class="infogerais1">
+      <div class="infoiniciais" style="color: aliceblue; position: absolute; top: 50%; left: 10%;">
+
+          <h3 style="padding-left: 109px;font-family: 'Avengero', sans-serif; font-size: x-large; font-style: italic;">Descricoes</h3>
+          <p style="position: absolute; bottom: 84.7%; left:54%; font-size:xx-large;">ç</p>
+          <p style="position: absolute; bottom: 90.7%; left:62%; font-size:x-large;">~</p>
+
+        <h4 style="padding-left: 21px;color: rgb(97, 97, 97);font-size: 26px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px rgb(100, 100, 100);">~ Vingadores: Ultimato ~</h4>
+        <p style="color: #ffffff; font-size: 20px; line-height: 1.5; font-family: 'Rajdhani', sans-serif; text-align: justify; padding: 10px;text-indent: 10px;">Vingadores: Ultimato marca o encerramento épico da Saga do Infinito, mostrando os heróis reunindo forças para desfazer a destruição causada por Thanos. O filme combina emoção e momentos decisivos que concluem mais de uma década de histórias interligadas no MCU.</p>
+            <p class="texto">.Direção: Irmãos Russo;</p>
+        <p class="texto">.Roteiro: Markus & McFeely; </p>
+        <p class="texto">.Duração: 181 min </p>
+        <p class="texto">.Orçamento: US$ 356 milhões </p>
+        <p class="texto">.Bilheteria: US$ 2,79 bilhões </p>
+      </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 200 },
+    "size": { "value": 0.8 },
+    "move": { "speed": 0.3 },
+    "line_linked": { "enable": false },
+    "opacity": { "value": 0.8, "random": true }
+  }
+});
+</script>  
+
+    <script>
+      
+    const video = document.getElementById('intro-video');
+    const mainContent = document.getElementById('conteudo-portfolio');
+    const playButton = document.getElementById('playbutton');
+
+    playButton.addEventListener('click', () => {
+    video.play();
+    video.muted = false;
+    playButton.style.display = 'none';
+    });
+
+    video.addEventListener('ended', () => {
+      video.style.display = 'none';
+      mainContent.style.display = 'block';
+    });
+    
+  </script>
+
+</div>
+  </body>
+</html>
