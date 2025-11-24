@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matemática - Joia da Mente</title>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/avengero" rel="stylesheet">
+
+    </head>
+
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            overflow-y: hidden;
+        }
+
+        html{
+  scroll-behavior: smooth
+}
+        h1{
+            position: fixed;
+            top: 10px; left: 550px; z-index: 10000;
+            font-family: 'Avengero', sans-serif;
+            color: white;
+
+        }
+
+
+        .fragmento{
+            position: fixed;
+            top: 10px;
+            left: 29%;
+            width: 550px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 100;
+        }
+        .fragmento:hover{
+            transform: scale(1.1);
+        }
+        .painel-joia{
+            position: fixed;
+            top:0;
+            right: -420px;
+            width: 350px;
+            height: 100%;
+            background-color: rgba(34, 34, 34, 0.95);
+            color: white;
+            padding: 10px;
+            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+            transition: right 0.5s ease;
+            z-index: 1000;
+        }
+
+        .joia-container:hover + .painel-joia{
+            right: 0
+        }
+
+        .titulo{
+            text-align: center;
+            color: #ffcc00;
+            font-size: 26px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px #ffd700;
+            text-indent: 10px;
+}
+        .texto{
+        color: #ffffff; /* Cor do texto explicativo */
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: 'Rajdhani', sans-serif;
+        text-align: justify;
+        text-indent: 10px;
+        }
+        .textoinfo{
+                    color: #ffffff; /* Cor do texto explicativo */
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-indent: 10px;
+        }
+
+.menu-container {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 100vh;
+  width: 20px; /* apenas a "alça" visível */
+  z-index: 1000;
+}
+.verticalmenu {
+  position: absolute;
+  top: 20px;
+  left: -373px; /* escondido, exceto a alça */
+  width: 380px;
+  height: 84.5%;
+  list-style-type: none;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  padding-top: 15px;
+  background-color: rgb(43, 43, 43);
+  border-radius: 0 1000px 1000px 0;
+  transition: left 0.5s ease;
+}
+.menu-container:hover .verticalmenu {
+  left: 0;
+}
+.simbolo {
+  position: absolute;
+  top: 84%;
+  left: 100%;
+  transform: translateY(-450%);
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  z-index: 1001;
+}
+
+.iconesimbolo{
+  
+  width: 70px;
+  opacity: 1;
+  visibility: visible;
+    transition: opacity 1s ease, visibility 3s ease, transform 0.5s ease
+}
+
+.menu-container:hover .iconesimbolo {
+transform: translate(-5px, -280px) rotate(360deg);
+}
+.simboloving:hover{
+      all: unset;
+
+}
+
+@keyframes brilho1 {
+  0% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px yellow);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px yellow);
+  }
+}
+
+img.manoplabrilhante {
+  animation: brilho1 1.5s infinite;
+}
+
+@keyframes brilho2 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(163, 163, 13));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(163, 163, 13));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(163, 163, 13));
+  }
+}
+
+img.joia1brilhante {
+  animation: brilho2 1.5s infinite;
+}
+
+@keyframes brilho3 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(162, 5, 5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(213, 52, 52));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(162, 5, 5));
+  }
+}
+
+img.joia2brilhante {
+  animation: brilho3 1.5s infinite;
+}
+
+@keyframes brilho4 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(5, 122, 1));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(50, 255, 43));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(5, 122, 1));
+  }
+}
+
+img.joia3brilhante {
+  animation: brilho4 1.5s infinite;
+}
+
+@keyframes brilho5 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(21, 51, 173));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(93, 86, 244));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(21, 51, 173));
+  }
+}
+
+img.joia4brilhante {
+  animation: brilho5 1.5s infinite;
+}
+
+@keyframes brilho6 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(183, 43, 8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(230, 73, 33));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(183, 43, 8));
+  }
+}
+
+img.joia5brilhante {
+  animation: brilho6 1.5s infinite;
+}
+
+@keyframes brilho7 {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(65, 0, 216));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(57, 0, 191));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgb(8, 1, 144));
+  }
+}
+
+img.joia6brilhante {
+  animation: brilho7 1.5s infinite;
+}
+
+    a{
+      color: white;
+      text-decoration: none;
+    }
+    a:hover{
+      color:azure;
+      background-color: black;
+      padding: 5px
+    }
+    li{
+      padding: 10px;
+    }
+
+            #particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  z-index: -1; /* fica atrás de tudo */
+}
+
+.quadro-joia {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 400vw;
+  height: 100vh;
+  overflow: hidden;
+  background: none/* ou seu fundo animado */
+}
+
+
+.fragmento1 {
+  position: relative;
+  padding: 200px;
+  left: 25%;
+  width: 500px;
+ animation: frag1 3s ease-in-out infinite
+}
+
+.fragmento1m1 {
+  position: absolute;
+  padding: 100px;
+  left: 4%;
+  width: 600px;
+ animation: frag1 10s ease-in-out infinite
+}
+
+.fragmento1m2 {
+  position: absolute;
+  padding: 300px;
+  left: 2%;
+  width: 700px;
+ animation: frag1 8s ease-in-out infinite
+}
+
+.fragmento1m3 {
+  position: absolute;
+  padding: 410px;
+  left: 8%;
+  width: 300px;
+ animation: frag1 5s ease-in-out infinite
+
+}
+
+@keyframes frag1{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+
+}
+
+
+section{
+  flex: 0 0 100vw;
+    height: 100vh;
+  scroll-snap-align: start;
+}
+
+.botaounidade{
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(0,0,0, 0.7);
+  z-index: 99999999;
+  padding: 3px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+width: 13.5ch;
+  transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+  
+
+}
+
+
+.textos{
+  position: absolute;
+  top: 20%;
+  left: 7.3%;
+  width: 400px;
+  height: 500px;
+  z-index: 100;
+}
+.imagem1{
+  position: relative;
+  top: 70px;
+  height: 80%;
+  width: 130%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+}
+.info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.textos:hover .botaounidade{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(320px);
+}
+
+.textos:hover .imagem1{
+  transform: translateX(-190px) scale(1.2);
+}
+.textos:hover .info{
+    opacity: 1;
+  transform: translateX(381px);
+}
+
+
+.fragmento2 {
+  position:absolute;
+  padding: 300px;
+  left: 25%;
+  width: 500px;
+ animation: frag2 3s ease-in-out infinite
+}
+
+.fragmento2m1 {
+  position: relative;
+  padding: 200px;
+  left: 30%;
+  width: 600px;
+ animation: frag2 10s ease-in-out infinite
+}
+
+.fragmento2m2 {
+  position: absolute;
+  padding: 100px;
+  left: 30%;
+  width: 600px;
+ animation: frag2 8s ease-in-out infinite
+}
+
+.fragmento2m3 {
+  position: absolute;
+  padding: 430px;
+  left: 34%;
+  width: 400px;
+ animation: frag2 5s ease-in-out infinite
+
+}
+
+.fragmento2m4 {
+  position: absolute;
+  padding: 400px;
+  left: 29%;
+  width: 600px;
+ animation: frag2 7s ease-in-out infinite
+
+}
+
+@keyframes frag2{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+
+}
+
+.botaounidade2{
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(0,0,0, 0.7);
+  z-index: 99999999;
+  padding: 3px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+width: 13.5ch;
+  transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+
+}
+
+.textos2{
+  position: absolute;
+  top: 25%;
+  left: 32.7%;
+  width: 400px;
+  height: 500px;
+  z-index: 100;
+}
+.imagem2{
+  position: relative;
+  bottom: 50px;
+  height: 115%;
+  width: 100%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+}
+.info2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.textos2:hover .botaounidade2{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(200px);
+}
+
+.textos2:hover .imagem2{
+  transform: translateX(-175px) scale(1.1);
+}
+.textos2:hover .info2{
+    opacity: 1;
+  transform: translateX(245px);
+}
+ 
+ 
+ .fragmento3 {
+  position:absolute;
+  padding: 300px;
+  left: 50%;
+  width: 500px;
+ animation: frag2 3s ease-in-out infinite
+}
+
+.fragmento3m1 {
+  position: relative;
+  padding: 200px;
+  left: 20%;
+  width: 600px;
+ animation: frag2 10s ease-in-out infinite
+}
+
+.fragmento3m2 {
+  position: absolute;
+  padding: 200px;
+  left: 60%;
+  width: 600px;
+ animation: frag2 8s ease-in-out infinite
+}
+
+.fragmento3m3 {
+  position: absolute;
+  padding: 430px;
+  left: 50%;
+  width: 600px;
+ animation: frag2 5s ease-in-out infinite
+
+}
+
+.fragmento3m4 {
+  position: absolute;
+  padding: 400px;
+  left: 29%;
+  width: 600px;
+ animation: frag2 7s ease-in-out infinite
+
+}
+
+@keyframes frag3{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+
+}
+ 
+
+.botaounidade3{
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(0,0,0, 0.7);
+  z-index: 99999999;
+  padding: 3px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+
+}
+
+.textos3{
+  position: absolute;
+  top: 25%;
+  left: 58.7%;
+  width: 400px;
+  height: 500px;
+  z-index: 100;
+}
+.imagem3{
+  position: relative;
+  top: 70px;
+  height: 80%;
+  width: 150%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+}
+.info3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.textos3:hover .botaounidade3{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(230px);
+}
+
+.textos3:hover .imagem3{
+  transform: translateX(-370px) scale(1.2);
+}
+.textos3:hover .info3{
+    opacity: 1;
+  transform: translateX(290px);
+}
+ 
+.fragmento4 {
+  position:absolute;
+  padding: 300px;
+  left: 83%;
+  width: 600px;
+ animation: frag2 3s ease-in-out infinite
+}
+
+.fragmento4m1 {
+  position: relative;
+  padding: 200px;
+  left: 20%;
+  width: 600px;
+ animation: frag2 10s ease-in-out infinite
+}
+
+.fragmento4m2 {
+  position: absolute;
+  padding: 100px;
+  left: 80%;
+  width: 600px;
+ animation: frag2 8s ease-in-out infinite
+}
+
+.fragmento4m3 {
+  position: absolute;
+  padding: 430px;
+  left: 73%;
+  width: 700px;
+ animation: frag2 5s ease-in-out infinite
+
+}
+
+@keyframes frag4{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+
+}
+
+.botaounidade4{
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(0,0,0, 0.7);
+  z-index: 99999999;
+  padding: 3px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+
+  transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+
+}
+
+.textos4{
+  position: absolute;
+  top: 25%;
+  left: 83.3%;
+  width: 400px;
+  height: 500px;
+  z-index: 100;
+}
+.imagem4{
+  position: relative;
+  top: 30px;
+  height: 90%;
+  width: 80%;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    border-radius: 5px;
+}
+.info4{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.textos4:hover .botaounidade4{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(100px);
+}
+
+.textos4:hover .imagem4{
+  transform: translateX(-202px) scale(1.2);
+}
+.textos4:hover .info4{
+    opacity: 1;
+  transform: translateX(150px);
+}
+    </style>
+    <body>
+    
+    <div id="particles-js"></div>
+          <h2 style="position: fixed;bottom:690px; left: 52%; z-index: 999999; color: rgb(255, 255, 255);">´</h2>
+    <h1>MATEMATICA</h1>
+
+
+      <div class="menu-container">
+                <div class="simbolo">
+          <a href="portfóliosemintro.html" class="simboloving"><img src="fotos/simbolovingadores.png" alt="Símbolo" class="iconesimbolo"></a>
+        </div>
+      <ul class="verticalmenu" id="menuvert">
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="sobremim.html" style="position: relative; top:17px">SOBRE MIM<img src="fotos/MANOPLAAAAAAAAAAAA_desenhodejoaolucas-removebg-preview.png" class="manoplabrilhante" style="width: 80px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_mat.html" style="position: relative; top: 17px;">MATEMÁTICA <img src="fotos/joia_amarela_Damente.png" class="joia1brilhante" style="width: 50px; position: relative; top:19px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_port.html" style="position: relative; top: 17px;">LINGUAGENS<img src="fotos/joia_vermelho_darealidade.png" class="joia2brilhante" style="width: 50px; position: relative; top:19px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_ch.html" style="position: relative; top:17px;">CIÊNCIAS HUMANAS<img src="fotos/joia_verde_dotempo.png" class="joia3brilhante" style="width: 50px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_cn.html" style="position: relative; top:17px;">CIÊNCIAS DA NATUREZA<img src="fotos/joia_azul_doespaço.png" class="joia4brilhante" style="width: 50px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_pj.html" style="position: relative; top:17px;">PROJETO DE VIDA <img src="fotos/joia_laranja_damente.png" class="joia5brilhante" style="width: 50px; position: relative; top:20px;"></a></li>
+          <li style="font-family: 'Orbitron', sans-serif;"><a href="pag_senai.html" style="position: relative; top: 17px;">SENAI <img src="fotos/joia_roxa_daforça.png" class="joia6brilhante"style="width: 50px; position: relative; top:20px;"></a></li>
+          </ul>
+        </div>
+
+
+        <div class="joia-container">
+          <img src="fotos/fundoamarelo.webp" alt="Fragmento" class="fragmento">
+        </div>
+
+                <div class="painel-joia">
+            <h3 class="titulo">~ Jóia da Mente ~</h3>
+            <p class="texto">Conhecida por sua capacidade de manipular a mente de qualquer ser, permitindo ao portador controlar pensamentos, emoções e até mesmo a realidade de suas vítimas.</p>
+            <p class="textoinfo">Características: </p> <p class="texto">
+            . Controle de pensamentos e emoções; </p><p class="texto">
+            . Leitura e projeção mental; </p><p class="texto">
+            . Expansão da consciência; </p><p class="texto">
+            . Criação de ilusões mentais;</p> <p class="texto">
+            . Acesso à sabedoria universal; </p><p class="texto">
+            . Amplificação da inteligência</p> 
+        </div>
+<div class="quadro-joia">
+  <section id="secao1">
+  <!-- Fragmento 1 -->
+  <div class="fragmentos" id="fragment1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento1m1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento1m2">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento1m3">
+  </div>
+  
+  <div class="textos">
+    <img src="fotos/saláriominimo3U.jpg" alt="Foto da atividade" class="imagem1">
+    <h2 style="position: absolute;  bottom: 99%; left: 16%; color: white;  font-family: 'Orbitron', sans-serif; cursor: pointer;box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601)" class="botaounidade">TERCEIRA UNIDADE</h2>
+                  <div class="info">
+      <nav>
+    <a href="#secao2" style="position: absolute;top:9.3%; left: 76%;z-index: 100; color: white; background-color: rgb(54, 42, 26); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);">Avançar</a>
+      </nav>
+    <h3 style="position: absolute; bottom: 77% ; left: 5%; color: white; font-family: 'Orbitron', sans-serif; font-size:30px;; border-radius: 10px; padding: 5px;">RENDA FAMILIAR - </h3>
+    <p style=" position: absolute; ;top: 16%; left: 1%; width: 500px; font-size:x-large;text-align: justify;text-justify: inter-word; color: white; font-family: 'Rajdhani', sans-serif; border-radius: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 5px; padding-top: 5px; text-indent: 10px;">Segundo a solicitação do professor Ginaldo, realizamos uma pequena apresentação sobre as necessidades e distribuição de renda familiar. Desenvolvemos habilidades que serão essenciais para o nosso futuro profissional, como a responsabilidade e escolhas para com nossos ganhos.</p>
+    </div>
+  </div>
+  </section>
+
+  <section id="secao2">
+  <!-- Fragmento 2 -->
+  <div class="fragmentos" id="fragment1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento2">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento2m1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento2m2">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento2m3">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento2m4">
+  </div>
+  
+  <div class="textos2">
+    <img src="fotos/questõesrecupereaçõadenotas3U.jpg" alt="Foto da atividade" class="imagem2">
+    <h2 style="position: absolute;  bottom: 99%; left: 16%; color: white;  font-family: 'Orbitron', sans-serif; cursor: pointer;box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601)" class="botaounidade2">TERCEIRA UNIDADE</h2>
+                  <div class="info2">
+      <nav>
+    <a href="#secao3" style="position: absolute;top:2%; left: 76%;z-index: 100; color: white; background-color: rgb(54, 42, 26); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);">Avançar</a>
+      </nav>
+    <h3 style="position: absolute; bottom: 77% ; left: 5%; color: white; font-family: 'Orbitron', sans-serif; font-size:30px;; border-radius: 10px; padding: 5px;">QUESTÕES NO <BR> QUADRO - </h3>
+    <p style=" position: absolute; ;top: 16%; left: 1%; width: 500px; font-size:x-large;text-align: justify;text-justify: inter-word; color: white; font-family: 'Rajdhani', sans-serif; border-radius: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 5px; padding-top: 5px; text-indent: 10px;">Seguindo a proposta de nosso mestre Assis, realizamos uma questão sobre qualquer uma das matérias vistas durante todo o ano letivo, desde conjuntos até funções exponenciais. Semelhante à atividade do primeiro bimestre, conseguimos revisar os conteúdos e exercitar nossa abordagem de tema.</p>
+    </div>
+  </div>
+   </section>
+
+  <section id="secao3">
+  <!-- Fragmento 3 -->
+  <div class="fragmentos" id="fragment1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento3">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento3m1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento3m2">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento3m3">
+  </div>
+
+  <div class="textos3">
+    <img src="fotos/WhatsApp Image 2025-11-24 at 13.01.47.jpeg" alt="Foto da atividade" class="imagem3">
+    <h2 style="position: absolute;  bottom: 99%; left: 16%; color: white;  font-family: 'Orbitron', sans-serif; cursor: pointer;box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601)" class="botaounidade3">QUARTA UNIDADE</h2>
+                  <div class="info3">
+      <nav>
+    <a href="#secao4" style="position: absolute;top:9%; left: 76%;z-index: 100; color: white; background-color: rgb(54, 42, 26); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);">Avançar</a>
+      </nav>
+    <h3 style="position: absolute; bottom: 77% ; left: 3%; color: white; font-family: 'Orbitron', sans-serif; font-size:30px;; border-radius: 10px; padding: 5px;">PIRÂMIDES - </h3>
+    <p style=" position: absolute; ;top: 16%; left: 1%; width: 500px; font-size:x-large;text-align: justify;text-justify: inter-word; color: white; font-family: 'Rajdhani', sans-serif; border-radius: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 5px; padding-top: 5px; text-indent: 10px;">Trabalho proposto pelo professor Assis no qual meu grupo apresentou sobre as propriedades, definições, classificações e questões acerca das pirâmides, reforçando nossos conhecimentos acerca desse e dos demais conteúdos bastante cobrado em provas e concursos.</p>
+    </div>
+  </div>
+   </section>
+
+  <!-- Fragmento 4--> 
+   <section id="secao4">
+  <div class="fragmentos" id="fragment4">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento4">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento4m1">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento4m2">
+    <img src="fotos/poeiramatemática.webp" alt="Poeira Cósmica" class="fragmento4m3">
+  </div> 
+  <div class="textos4">
+    <img src="fotos/ssaquestõesportfólio4U.webp" alt="Foto da atividade" class="imagem4">
+    <h2 style="position: absolute;  bottom: 99%; left: 16%; color: white;  font-family: 'Orbitron', sans-serif; cursor: pointer;box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601)" class="botaounidade4">QUARTA UNIDADE</h2>
+                  <div class="info4">
+      <nav>
+    <a href="#secao1" style="position: absolute;top:4.5%; left: 78%;z-index: 100; color: white; background-color: rgb(54, 42, 26); padding: 5px; border-radius: 5px; font-family: 'Orbitron', sans-serif; box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.601);">Retornar</a>
+      </nav>
+    <h3 style="position: absolute; bottom: 82% ; left: 3.5%; color: white; font-family: 'Orbitron', sans-serif; font-size:30px;; border-radius: 10px; padding: 5px;">QUESTÕES SSA1 - </h3>
+    <p style=" position: absolute; ;top: 11%; left: 1%; width: 500px; font-size:x-large;text-align: justify;text-justify: inter-word; color: white; font-family: 'Rajdhani', sans-serif; border-radius: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 5px; padding-top: 5px; text-indent: 10px; line-height: 1.3;">Com o auxílio do professor Assis, resolvemos algumas questões da matéria de matemática que foram selecionadas na prova de 2024 do SSA1. Pudemos revisar vários conteúdos abordados em sala de aula e ainda exercitar nossos conhecimentos.</p>
+    </div>
+  </div>
+  </section>
+</div>
+         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 250 },
+    "size": { "value": 1 },
+    "move": { "speed": 0.4 },
+    "line_linked": { "enable": false },
+    "opacity": { "value": 0.8, "random": true }
+  }
+});
+</script>
+
+
+    </body>
+</html>
